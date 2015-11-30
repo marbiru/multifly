@@ -35,7 +35,7 @@ function winChance(myPick) {
 
 var myWinsArray = [];
 for (var i = 2; i <= 27; i++) {
-    myWinsArray.push(winChance(i));
+    myWinsArray.push(winChance(i) + "/26");
 };
 
 
