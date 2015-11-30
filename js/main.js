@@ -3,23 +3,43 @@ for (var i = 2; i <= 27; i++) {
     myPickArray.push(i);
 };
 
-var myWins = 0;
-var randomWins = 0;
+myPickOutput.innerHTML = myPickArray.join(" | ");
 
 
-var myPick = 6;
+function winChance(myPick) {
 
-for (var randomPick = 2; randomPick <= 27; randomPick++) {
+	var myWins = 0;
+	var randomWins = 0;
 
-	if (randomPick % myPick == 0) {
-		randomWins += 1;
-	} else if (myPick % randomPick == 0) {
-		myWins += 1;
-	} else if (myPick < randomPick) {
-		myWins += 1;
-	} else if (randomPick < myPick) {
-		randomWins += 1;
+	for (var randomPick = 2; randomPick <= 27; randomPick++) {
+
+		if (randomPick % myPick == 0) {
+			randomWins += 1;
+		} else if (myPick % randomPick == 0) {
+			myWins += 1;
+		} else if (myPick < randomPick) {
+			myWins += 1;
+		} else if (randomPick < myPick) {
+			randomWins += 1;
+		};
 	};
+
+	console.log(myWins);
+
+	return myWins
+
 };
 
-console.log(myWins);
+var myWinsArray = [];
+for (var i = 2; i <= 27; i++) {
+    myWinsArray.push(winChance(i));
+};
+
+/* var myWinsArray = [
+	13,
+	16,
+	19,
+	18,
+] */
+
+myWinsOutput.innerHTML = myWinsArray.join(" | ");
