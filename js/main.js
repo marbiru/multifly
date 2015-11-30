@@ -3,7 +3,7 @@ for (var i = 2; i <= 27; i++) {
     myPickArray.push(i);
 };
 
-myPickOutput.innerHTML = myPickArray.join(" | ");
+myPickOutput.innerHTML = myPickArray.join("<br />");
 
 
 function winChance(myPick) {
@@ -26,7 +26,10 @@ function winChance(myPick) {
 
 	console.log(myWins);
 
-	return myWins
+	//eventually should use this instead
+	winPercentage = (myWins/26)*100;
+
+	return myWins;
 
 };
 
@@ -35,11 +38,5 @@ for (var i = 2; i <= 27; i++) {
     myWinsArray.push(winChance(i));
 };
 
-/* var myWinsArray = [
-	13,
-	16,
-	19,
-	18,
-] */
 
-myWinsOutput.innerHTML = myWinsArray.join(" | ");
+myWinsOutput.innerHTML = myWinsArray.join("<br />");

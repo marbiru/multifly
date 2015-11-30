@@ -45,11 +45,17 @@
       </div>
 
       <div class="large-10 medium-10 columns">
-        <h4>First move: probabilities of winning against a random opponent</h4>
-        <p><span id="myPickOutput"></span>
-          <br />
-          <span id="myWinsOutput"></span>
-        </p>
+        <h4>First move: probabilities of winning (against random strategy)</h4>
+        <p>for any given choice that player 1 chooses, if the other player is choosing at random, there is a fixed % chance that p1 will win. NOTE: this isn't necessarily the best strategic choice overall -- maybe you don't want to start with your "best choice", because of impacts on the probabilities later on -- but it seems like useful info to start with.</p>
+        <div class="large-4 medium-2 columns">&nbsp;</div>
+        <div class="large-2 medium-2 columns">
+          <p>P1 choice</p>
+          <span id="myPickOutput"></span>
+        </div>
+        <div class="large-2 medium-2 columns">
+          <p> Wins</p>
+            <span id="myWinsOutput"></span>
+        </div>
 
       <div class="large-1 medium-1 columns">
         <p>&nbsp;</p>  
